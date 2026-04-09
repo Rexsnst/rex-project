@@ -126,7 +126,7 @@ button {
     width: 100%;
     height: auto;
     object-fit: cover;
-    aspect-ratio: 1 / 1; 
+    aspect-ratio:auto; 
     display: block;
     transition: transform 0.3s ease;
 }
