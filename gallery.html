@@ -6,35 +6,320 @@
     <title>My Very First Web</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="gallery.css">
+    <style>
+        /* --- Modal (Popup) Styles --- */
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 1000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            cursor: pointer;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 80vh;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            /* Animation */
+            animation: zoom 0.3s;
+        }
+
+        @keyframes zoom {
+            from {transform: scale(0.7); opacity: 0;}
+            to {transform: scale(1); opacity: 1;}
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .gallery-item img {
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .gallery-item img:hover {
+            opacity: 0.8;
+        }
+    </style>
 </head>
 <body>
 
     <div class="container">
-        <header>
-            <div class="social-links">
-                <a href="https://www.facebook.com/rex.bolina.5" target="_blank"><i class="fab fa-facebook"></i> <span>Facebook</span></a>
-                <a href="https://www.instagram.com/rex_snst?igsh=MXNiaDg5bHJ2cDk0Yg==" target="_blank"><i class="fab fa-instagram"></i> <span>Instagram</span></a>
-                <a href="https://github.com/Rexsnst" target="_blank"><i class="fab fa-github"></i> <span>Github</span></a>
+        <header class="top-bar">
+            <div class="profile-section">
+                <img src="1by1.jpg" alt="Rex Bolina" class="profile-img">
+                <span class="profile-name">Rex Bolina</span>
             </div>
-            <nav class="main-nav">
-                <a href="https://rexgelstory.vercel.app/">My Story?</a>
-                <a href="https://rexabout.vercel.app/">About</a>
-                <a href="https://www.facebook.com/rex.bolina.5">Contact</a>
-                <a href="https://rexgallery.vercel.app/">Gallery</a>
-            </nav>
+            
+            <div class="social-links">
+                <a href="https://www.facebook.com/rex.bolina.5" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/rex_snst?igsh=MXNiaDg5bHJ2cDk0Yg==" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/Rexsnst" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </header>
+
+        <nav class="main-nav">
+            <a href="https://rexgelstory.vercel.app/">My Story?</a>
+            <a href="https://rexabout.vercel.app/">About</a>
+            <a href="https://www.facebook.com/rex.bolina.5">Contact</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="test.html">Test</a>
+        </nav>
         </header>
 
         <main class="bento-grid">
-            <div class="gallery-item">
-        <img src="Messenger_creation_91D45DF7-761F-4938-A64D-C7DF7E0D8AB8.jpeg" alt="Gallery Photo">
-            </div>
-            <div class="gallery-item">
-        <img src="Messenger_creation_91D45DF7-761F-4938-A64D-C7DF7E0D8AB8.jpeg" alt="Gallery Photo">
-            </div>
-            <div class="gallery-item">
-        <img src="Messenger_creation_91D45DF7-761F-4938-A64D-C7DF7E0D8AB8.jpeg" alt="Gallery Photo">
-            </div>
-        </main>
+    <div class="gallery-item"><img src="p1.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p2.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p3.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p4.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p5.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p6.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p7.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p8.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p9.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p10.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p11.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p12.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p13.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p14.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p15.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p16.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p17.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p18.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p19.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p20.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p21.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p22.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p23.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p24.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p25.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p26.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p27.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p28.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p29.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p30.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p31.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p32.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p33.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p34.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p35.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p36.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p37.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p38.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p39.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p40.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p41.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p42.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p43.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p44.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p45.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p46.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p47.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p48.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p49.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p50.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p51.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p52.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p53.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p54.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p55.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p56.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p57.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p58.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p59.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p60.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p61.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p62.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p63.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p64.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p65.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p66.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p67.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p68.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p69.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p70.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p71.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p72.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p73.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p74.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p75.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p76.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p77.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p78.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p79.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p80.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p81.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p82.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p83.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p84.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p85.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p86.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p87.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p88.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p89.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p90.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p91.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p92.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p93.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p94.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p95.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p96.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p97.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p98.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p99.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p100.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p101.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p102.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p103.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p104.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p105.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p106.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p107.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p108.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p109.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p110.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p111.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p112.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p113.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p114.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p115.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p116.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p117.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p118.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p119.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p120.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p121.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p122.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p123.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p124.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p125.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p126.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p127.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p128.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p129.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p130.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p131.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p132.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p133.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p134.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p135.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p136.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p137.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p138.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p139.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p140.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p141.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p142.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p143.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p144.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p145.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p146.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p147.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p148.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p149.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p150.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p151.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p152.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p153.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p154.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p155.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p156.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p157.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p158.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p159.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p160.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p161.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p162.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p163.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p164.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p165.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p166.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p167.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p168.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p169.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p170.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p171.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p172.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p173.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p174.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p175.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p176.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p177.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p178.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p179.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p180.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p181.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p182.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p183.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p184.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p185.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p186.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p187.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p188.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p189.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p190.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p191.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p192.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p193.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p194.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p195.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p196.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p197.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p198.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p199.jpg" alt="Gallery Photo"></div>
+    <div class="gallery-item"><img src="p200.jpg" alt="Gallery Photo"></div>
+</main>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close-btn">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script>
+        // Get the modal
+        const modal = document.getElementById("myModal");
+        const modalImg = document.getElementById("img01");
+        const closeBtn = document.getElementsByClassName("close-btn")[0];
+
+        // Select all images in the gallery
+        const images = document.querySelectorAll(".gallery-item img");
+
+        // Loop through images and add click event
+        images.forEach(img => {
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        });
+
+        // Close when clicking the 'X'
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close when clicking anywhere outside the image
+        modal.onclick = function(event) {
+            if (event.target !== modalImg) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
-</html>
+                                                                         </html>
