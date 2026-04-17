@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script defer src="/_vercel/insights/script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Very First Web | Rex Bolina</title>
@@ -71,7 +70,7 @@
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; grid-template-areas: "area1 area2" "area1 area4" "area3 area4" "area5 area5"; }
         .a-box1 { grid-area: area1; } .a-box2 { grid-area: area2; } .a-box3 { grid-area: area3; justify-content: center; } .a-box4 { grid-area: area4; justify-content: space-between; } .a-box5 { grid-area: area5; padding: 15px 10px; }
         .about-label { font-size: 20px; color: var(--text-primary); margin-bottom: 5px; }
-        .about-val { font-size: 27px; line-height: 1.1; }
+        .about-val { font-size: 28px; line-height: 1.1; }
 
         /* --- PAGE: CONTACTS --- */
         .contact-title { font-size: 2rem; color: var(--accent); margin-bottom: 20px; }
@@ -102,7 +101,7 @@
         <header class="top-bar">
             <div class="profile-section">
                 <img src="1by1.jpg" alt="Rex Bolina" class="profile-img">
-                <span style="font-size:25" class="profile-name">Rex Bolina</span>
+                <span style="font-size:25px" class="profile-name">Rex Bolina</span>
             </div>
             <div class="social-links">
                 <a href="https://www.facebook.com/rex.bolina.5" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -124,7 +123,7 @@
             <div class="home-grid">
                 <div class="box h-box1">
                     <img src="Messenger_creation_91D45DF7-761F-4938-A64D-C7DF7E0D8AB8.jpeg" alt="pic1">
-                    <h3 style="font-size:20" class="greeting">misskonasiya<br>nakakainisss</h3>
+                    <h3 style="font-size:20px" class="greeting">misskonasiya<br>nakakainisss</h3>
                 </div>
                 <div class="box h-box2">
                     <p>Hiii, this is my first developed website🫶. I'm just a begginer at coding, you're very welcomed heree and feel free to suggest something to make this web functions well tysm.</p>
@@ -153,12 +152,12 @@
             <h1 class="greeting about-title">&nbsp;&nbsp; ABOUT ME</h1>
             <div class="about-grid">
                 <div class="box a-box1">
-                    <h3 class="about-label">FULL NAME</h3>
+                    <h3 class="about-label">FULL NAME</h3><br>
                     <h3 class="greeting about-val">REX TALAGTAG <br>BOLINA</h3>
                 </div>
                 <div class="box a-box2">
                     <h3 class="about-label">BIRTH DATE</h3>
-                    <h3 class="greeting about-val"> &nbsp;08/07/2008</h3>
+                    <h3 class="greeting about-val"> &nbsp;&nbsp;08/07/2008</h3>
                 </div>
                 <div class="box a-box3">
                     <h3 class="about-label">HEIGHT</h3>
@@ -189,8 +188,7 @@
         </main>
 
         <main id="gallery" class="page">
-            <div class="gallery-grid" id="gallery-container">
-                </div>
+            <div class="gallery-grid" id="gallery-container"></div>
         </main>
 
         <main id="test" class="page"><h1 class="contact-title">Test Page Content</h1></main>
@@ -215,9 +213,8 @@
             }
         }
 
-        // Fill Gallery (p1 to p200)
         const container = document.getElementById('gallery-container');
-        for (let i = 1; i <= 200; i++) {
+        for (let i = 1; i <= 12; i++) {
             const div = document.createElement('div');
             div.className = 'gallery-item';
             div.innerHTML = `<img src="images/p${i}.jpg" alt="Gallery Photo" onclick="openModal(this.src)">`;
@@ -235,7 +232,6 @@
             document.getElementById("myModal").style.display = "none";
         }
 
-        // Close modal on outside click
         window.onclick = function(event) {
             const modal = document.getElementById("myModal");
             if (event.target == modal) { closeModal(); }
