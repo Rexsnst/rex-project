@@ -96,15 +96,15 @@ header {
     width: 100%;
     position: absolute;
     display: flex;
-    gap: 29px;
+    gap: 26px;
     white-space: nowrap;
-    height: 90px;
+    height: 85px;
     margin-left: 10px;
     z-index: ;
 }
 
 .photo-container img {
-    height: 105px;
+    height: 95px;
     align-items: center;
     border-radius: 50%;
 }
