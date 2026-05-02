@@ -1,50 +1,190 @@
-.navigations {
-   margin-top:50px;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   margin-bottom: 12px;
+body {
+    margin: 0;
+    z-index: 99;
 }
 
 header {
     position: fixed;
     top: 0;
-    width: 67%;
+    left: 0;
+    width: 100%;
+    
     background-color: white;
-    z-index: 1000
+    z-index: 100;
+
 }
+.navigations {
+    background-color: rgb(255, 255, 255);
+   margin-top:12px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
 .add-story-button {
-    margin-left:30px;
-    width: 29px;
+    margin-left:20px;
+    width: 18px;
 }
 
 .instagram-logo {
     margin-left: 16px;
-    width: 165px;
+    width: 120px;
+    margin-top: 5px;
 }
 
 .notification-button {
-    width: 75px;
-    margin-right: 16px;
+    width: 49px;
+    margin-right: 9px;
 }
 
+.nav {
+    position: fixed;
+    left: 0px;
+    width: 100%;
+    bottom: 0px;
+    background-color: white;
+    z-index: 100;
+
+}
+
+.nav-container {
+    background-color: rgb(255, 255, 255);
+   margin-top:0px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin: 0px 20px 0px 20px;
+}
+
+
+.home-button {
+    width: 23px;
+}
+.reels-button {
+    width: 25px;
+}
+.messages-button {
+    margin-left: 11px;
+    width: 48px;
+}
+.search-button {
+    width: 22px;
+}
+.my-profile {
+    width: 30px;
+}
 .stories-container::-webkit-scrollbar {
     display: none;
+    
 }
 
 .stories-container {
+    position: relative;
+    left: 0px;
     width: 100%;
+    height: 79px;
     display: flex;
     white-space: nowrap;
     overflow-x: auto;
     gap: 25px;
-    position: fixed;
-    margin-left: 0;
-    margin-top: 180px;
+    margin-top: 80px;
+    align-items: center;
+    z-index: 98;
 }
 
-.stories img{
-    height: 100px;
-    width: 100px;
-    border-radius: 50px;
+.photo-container {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    gap: 15px;
+    white-space: nowrap;
+    height: 70px;
+    margin-left: 10px;
+    z-index: ;
+}
+
+.photo-container img {
+    height: 70px;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.post-container-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.post-container-top img {
+    margin: 5px 17px 5px 8px;
+    width: 40px;
+}
+
+.post-left-section {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.profile-picture img {
+    border-radius: 50%;
+}
+
+.post-content {
+    display: grid;
+    grid-template-rows:1fr 1frpx;
+}
+.username {
+    font: size 2px;
+    margin-top: 5px;
+    margin-bottom:1px
+}
+.user-bottom {
+    margin-top: -4px;
+    margin-bottom:0px
+}
+ .right-section {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+ }
+
+ .follow-button {
+    background-color: rgb(218, 217, 217);
+    height: 32px;
+    width: 70px;
+    margin: 12px 20px 0px 0px;
+
+    border-radius: 10px;
+    border: none;
+ }
+
+ .dots-button {
+
+    background-color: rgba(218, 217, 217, 0);
+    height: 3px;
+    width: 10px;
+    line-height: 9px;
+    margin: 10px 10px;
+    font-weight: 900;
+    border: none;
+ }
+
+.post-container-bottom {
+    background-color: lightcoral;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.post-photo {
+}
+
+.interaction {
+    background-color: lightblue;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 1fr 2fr 40px;
+    column-gap: 16px;
+}
+.save-button {
 }
