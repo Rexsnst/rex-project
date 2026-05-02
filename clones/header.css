@@ -1,0 +1,50 @@
+.navigations {
+   margin-top:50px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-bottom: 12px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000
+}
+.add-story-button {
+    margin-left:30px;
+    width: 29px;
+}
+
+.instagram-logo {
+    margin-left: 16px;
+    width: 165px;
+}
+
+.notification-button {
+    width: 75px;
+    margin-right: 16px;
+}
+
+.stories-container::-webkit-scrollbar {
+    display: none;
+}
+
+.stories-container {
+    width: 100%;
+    display: flex;
+    white-space: nowrap;
+    overflow-x: auto;
+    gap: 25px;
+    position: fixed;
+    margin-left: 0;
+    margin-top: 180px;
+}
+
+.stories img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+}
